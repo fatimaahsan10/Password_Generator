@@ -1,0 +1,18 @@
+import random
+import string
+
+def generate_password(length=10):
+    # Define characters: letters, numbers, symbols
+    characters = string.ascii_letters + string.digits + string.punctuation
+    #ascii is used to write capital A to Z and small a to z
+    #punctuation includes !@#$%^& these characters 
+     # Pick random characters one by one and join them
+    password = ''.join(random.choice(characters) for _ in range(length))
+    '''
+    we used a empty string here because we did not want anything between the 
+    letters when combining
+    '''
+    
+    return password
+
+print(" Example 10-character password:", generate_password(10))
